@@ -2,7 +2,6 @@
 
 public class Factory
 {
-    public int MinLevel => this.Config.MinLevel;
     public readonly FactoryConfig Config;
 
     public Action<int> OnStockChanged;
@@ -46,6 +45,7 @@ public class Factory
             }
 
             this.level = value;
+            this.level = Math.Max(this.level, this.Config.MinLevel);
 
             if (this.OnLevelChanged != null)
             {
