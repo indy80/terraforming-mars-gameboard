@@ -2,7 +2,7 @@
 unity/Library
 unity/Temp
 unity/UnityPackageManager
-build/
+unity/build/
 art/
 
 *.sln
